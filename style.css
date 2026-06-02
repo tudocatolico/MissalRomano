@@ -440,11 +440,12 @@ main {
 
 /* Controle de fonte no footer */
 .font-control {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  margin-top: 0.8rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
 }
 
 .font-control-label {

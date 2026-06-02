@@ -12,6 +12,32 @@
     });
   }
 
+  // ── Wake Lock (manter tela ligada) ─────────────────────
+  var wakeLock = null;
+
+  async function solicitarWakeLock() {
+    if ('wakeLock' in navigator) {
+      try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release', function () {
+          wakeLock = null;
+        });
+      } catch (e) {
+        // Silencioso — navegador pode negar se aba não estiver visível
+      }
+    }
+  }
+
+  // Solicitar ao carregar
+  solicitarWakeLock();
+
+  // Re-solicitar quando a aba voltar a ficar visível (o wake lock é liberado automaticamente ao sair)
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') {
+      solicitarWakeLock();
+    }
+  });
+
   // ── Botão Voltar ao Topo ────────────────────────────────
   var btnTopo = document.getElementById('btnTopo');
 

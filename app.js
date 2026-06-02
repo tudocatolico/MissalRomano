@@ -92,8 +92,43 @@
     });
   }
 
+  // ── Controle de Fonte ───────────────────────────────────
+  var btnFontMais = document.getElementById('btnFontMais');
+  var btnFontMenos = document.getElementById('btnFontMenos');
+  var fatores = [0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2];
+  var fatorAtual = 3; // index do fator 1 (padrão)
+
+  // Restaurar fator salvo
+  try {
+    var fatorSalvo = localStorage.getItem('missal-fator-fonte');
+    if (fatorSalvo !== null) {
+      var idx = fatores.indexOf(parseFloat(fatorSalvo));
+      if (idx !== -1) {
+        fatorAtual = idx;
+        htmlEl.style.setProperty('--fator-fonte', fatores[fatorAtual]);
+      }
+    }
+  } catch (e) {}
+
+  btnFontMais.addEventListener('click', function () {
+    if (fatorAtual < fatores.length - 1) {
+      fatorAtual++;
+      htmlEl.style.setProperty('--fator-fonte', fatores[fatorAtual]);
+      try { localStorage.setItem('missal-fator-fonte', fatores[fatorAtual]); } catch (e) {}
+    }
+  });
+
+  btnFontMenos.addEventListener('click', function () {
+    if (fatorAtual > 0) {
+      fatorAtual--;
+      htmlEl.style.setProperty('--fator-fonte', fatores[fatorAtual]);
+      try { localStorage.setItem('missal-fator-fonte', fatores[fatorAtual]); } catch (e) {}
+    }
+  });
+
   // ── Modal Apoiar (PIX) ──────────────────────────────────
   var btnApoiar = document.getElementById('btnApoiar');
+  var btnCurtir = document.getElementById('btnCurtir');
   var modalPix = document.getElementById('modalPix');
   var modalFechar = document.getElementById('modalFechar');
   var btnCopiar = document.getElementById('btnCopiar');
@@ -113,6 +148,7 @@
   }
 
   btnApoiar.addEventListener('click', abrirModal);
+  btnCurtir.addEventListener('click', abrirModal);
   modalFechar.addEventListener('click', fecharModal);
 
   // Fechar ao clicar fora do modal

@@ -2,7 +2,7 @@
 // MISSAL ROMANO — Service Worker (Offline)
 // ═══════════════════════════════════════════════════════════
 
-var CACHE_NAME = 'missal-romano-v5';
+var CACHE_NAME = 'missal-romano-v6';
 var ASSETS = [
   '/',
   '/index.html',

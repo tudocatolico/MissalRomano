@@ -14,6 +14,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
       - name: Deploy via lftp (SFTP)
         run: |
           lftp -u "${{ secrets.FTP_USER }},${{ secrets.FTP_PASS }}" \

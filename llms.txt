@@ -1,0 +1,22 @@
+# Missal Romano Digital
+
+> Respostas do povo na Santa Missa conforme a 3.ª edição típica do Missal Romano, tradução aprovada pela CNBB (Conferência Nacional dos Bispos do Brasil) em 2023, vigente desde 3 de dezembro de 2023.
+
+Este site contém todas as respostas da assembleia (povo/fiéis) durante a celebração da Santa Missa na Igreja Católica Apostólica Romana, organizadas nas seguintes seções:
+
+## Estrutura
+
+- **Ritos Iniciais**: saudação, ato penitencial (Confiteor com tríplice confissão), Senhor Piedade, Glória, oração coleta.
+- **Liturgia da Palavra**: respostas às leituras, aclamação ao Evangelho, Profissão de Fé (Credo Niceno e Apostólico), oração dos fiéis.
+- **Liturgia Eucarística**: preparação das oferendas, Orai Irmãos, prefácio (diálogo), Santo.
+- **Orações Eucarísticas**: aclamações da assembleia durante cada Oração Eucarística — I (Cânon Romano), II, III, IV, V, para Diversas Circunstâncias (D1–D4), sobre a Reconciliação (R1–R2). Inclui epiclese, aclamação memorial (3 fórmulas: "Mistério da fé", "Mistério da fé e do amor", "Mistério da fé para a salvação do mundo"), oferenda, comunhão, intercessões e doxologia.
+- **Rito da Comunhão**: Pai Nosso, embolismo, rito da paz, Cordeiro de Deus, comunhão, oração pós-comunhão.
+- **Ritos Finais**: bênção final, despedida (4 fórmulas).
+
+## Informações
+
+- URL: https://missal.emdeus.com.br/
+- Idioma: Português do Brasil (pt-BR)
+- Funciona offline como PWA (Progressive Web App)
+- Gratuito e sem necessidade de cadastro
+- Publicado por: Em Deus (emdeus.com.br)
